@@ -23,7 +23,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+<<<<<<< HEAD
 .env*.local
+=======
+# .env*.local
+>>>>>>> 04153f1 (First Commit)
 
 # vercel
 .vercel
