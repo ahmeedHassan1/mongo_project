@@ -6,7 +6,7 @@ A complete Next.js application using the App Router that implements all MongoDB 
 
 ### Part 1 - MongoDB CRUD + Array Logic
 
-- ✅ **Create Collections**: Insert documents into collectionA and collectionB
+- ✅ **Create Collections**: Insert documents into students and courses
 - ✅ **Delete Documents**: Remove documents by ID from any collection
 - ✅ **Update with Score Array**: Add Score array to documents
 - ✅ **Conditional Array Logic**:
@@ -99,13 +99,13 @@ Body: { id: 1, action: "addScoreArray" | "insertIntoScore" | "multiplyScore" }
 
 ```
 PUT /api/relationship/create
-Body: { parentCollection: "collectionA", parentId: 10, childIds: [7,8,9] }
+Body: { parentCollection: "students", parentId: 10, childIds: [7,8,9] }
 ```
 
 ### Aggregation
 
 ```
-GET /api/aggregate/[parentId]?parentCollection=collectionA&childCollection=collectionB
+GET /api/aggregate/[parentId]?parentCollection=students&childCollection=courses
 ```
 
 ## 💡 Usage Guide

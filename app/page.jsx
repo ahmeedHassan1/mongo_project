@@ -5,34 +5,34 @@ import toast from "react-hot-toast";
 
 export default function Home() {
 	const [insertData, setInsertData] = useState({
-		collection: "collectionA",
+		collection: "students",
 		_id: "",
 		fields: ""
 	});
 
 	const [deleteData, setDeleteData] = useState({
-		collection: "collectionA",
+		collection: "students",
 		id: ""
 	});
 
 	const [updateData, setUpdateData] = useState({
-		collection: "collectionA",
+		collection: "students",
 		id: "",
 		action: "addScoreArray"
 	});
 
 	const [relationshipData, setRelationshipData] = useState({
 		type: "reference-parent",
-		parentCollection: "collectionA",
-		childCollection: "collectionB",
+		parentCollection: "students",
+		childCollection: "courses",
 		parentId: "",
 		childIds: "",
 		embeddedData: ""
 	});
 
 	const [aggregateData, setAggregateData] = useState({
-		parentCollection: "collectionA",
-		childCollection: "collectionB",
+		parentCollection: "students",
+		childCollection: "courses",
 		parentId: ""
 	});
 
@@ -48,7 +48,7 @@ export default function Home() {
 			const data = await res.json();
 
 			if (data.success) {
-				if (collectionName === "collectionA") {
+				if (collectionName === "students") {
 					setDocumentsA(data.documents);
 				} else {
 					setDocumentsB(data.documents);
@@ -257,10 +257,10 @@ export default function Home() {
 					<div className="bg-white rounded-lg shadow-lg p-4">
 						<div className="flex items-center justify-between mb-3">
 							<h3 className="text-lg font-semibold text-indigo-800">
-								📋 Collection A
+								📋 Students
 							</h3>
 							<button
-								onClick={() => fetchDocuments("collectionA")}
+								onClick={() => fetchDocuments("students")}
 								className="bg-indigo-600 text-white py-1.5 px-4 rounded-md hover:bg-indigo-700 transition text-sm flex items-center gap-2">
 								<svg
 									className="w-4 h-4"
@@ -297,10 +297,10 @@ export default function Home() {
 					<div className="bg-white rounded-lg shadow-lg p-4">
 						<div className="flex items-center justify-between mb-3">
 							<h3 className="text-lg font-semibold text-indigo-800">
-								📋 Collection B
+								📋 Courses
 							</h3>
 							<button
-								onClick={() => fetchDocuments("collectionB")}
+								onClick={() => fetchDocuments("courses")}
 								className="bg-indigo-600 text-white py-1.5 px-4 rounded-md hover:bg-indigo-700 transition text-sm flex items-center gap-2">
 								<svg
 									className="w-4 h-4"
@@ -351,8 +351,8 @@ export default function Home() {
 										setInsertData({ ...insertData, collection: e.target.value })
 									}
 									className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
-									<option value="collectionA">Collection A</option>
-									<option value="collectionB">Collection B</option>
+									<option value="students">Students</option>
+									<option value="courses">Courses</option>
 								</select>
 							</div>
 
@@ -413,8 +413,8 @@ export default function Home() {
 										setDeleteData({ ...deleteData, collection: e.target.value })
 									}
 									className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:border-transparent">
-									<option value="collectionA">Collection A</option>
-									<option value="collectionB">Collection B</option>
+									<option value="students">Students</option>
+									<option value="courses">Courses</option>
 								</select>
 							</div>
 
@@ -460,8 +460,8 @@ export default function Home() {
 										setUpdateData({ ...updateData, collection: e.target.value })
 									}
 									className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-									<option value="collectionA">Collection A</option>
-									<option value="collectionB">Collection B</option>
+									<option value="students">Students</option>
+									<option value="courses">Courses</option>
 								</select>
 							</div>
 
@@ -596,8 +596,8 @@ export default function Home() {
 										})
 									}
 									className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-transparent">
-									<option value="collectionA">Collection A</option>
-									<option value="collectionB">Collection B</option>
+									<option value="students">Students</option>
+									<option value="courses">Courses</option>
 								</select>
 							</div>
 
@@ -656,8 +656,8 @@ export default function Home() {
 											})
 										}
 										className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-transparent">
-										<option value="collectionA">Collection A</option>
-										<option value="collectionB">Collection B</option>
+										<option value="students">Students</option>
+										<option value="courses">Courses</option>
 									</select>
 								</div>
 								<div>
@@ -709,8 +709,8 @@ export default function Home() {
 										})
 									}
 									className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent">
-									<option value="collectionA">Collection A</option>
-									<option value="collectionB">Collection B</option>
+									<option value="students">Students</option>
+									<option value="courses">Courses</option>
 								</select>
 							</div>
 
@@ -727,8 +727,8 @@ export default function Home() {
 										})
 									}
 									className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent">
-									<option value="collectionA">Collection A</option>
-									<option value="collectionB">Collection B</option>
+									<option value="students">Students</option>
+									<option value="courses">Courses</option>
 								</select>
 							</div>
 
